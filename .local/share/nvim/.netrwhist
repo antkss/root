@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/etc/NetworkManager/system-connections'
+let g:netrw_dirhist_7='/etc'
+let g:netrw_dirhist_6='/etc/wpa_supplicant'
+let g:netrw_dirhist_5='/etc/modprobe.d'
+let g:netrw_dirhist_4='/etc/NetworkManager/system-connections'
+let g:netrw_dirhist_3='/etc/NetworkManager'
+let g:netrw_dirhist_2='/etc/NetworkManager/conf.d'
+let g:netrw_dirhist_1='/etc/fish/completions'

@@ -1,0 +1,4 @@
+WRN 2023-09-19T04:13:25.920 ?.134      server_start:164: Failed to start server: no such file or directory: /run/user/0/
+WRN 2023-09-19T04:14:25.956 ?.313      server_start:164: Failed to start server: no such file or directory: /run/user/0/
+WRN 2023-09-19T04:15:32.067 ?.343      server_start:164: Failed to start server: no such file or directory: /run/user/0/
+WRN 2023-09-19T04:34:59.058 ?.12       server_start:164: Failed to start server: no such file or directory: /run/user/0/

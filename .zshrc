@@ -3,7 +3,7 @@ if [ -z $DISPLAY ]; then
 fi 
 autoload -U colors && colors
 export DISPLAY=:0
-export zshdir=/home/as/.zsh
+export zshdir=~/.zsh
 export PATH=$PATH:/home/as/.bin/bin
 autoload -Uz compinit 
 if [[ -n $zshdir/.zcompdump(#qN.mh+24) ]]; then

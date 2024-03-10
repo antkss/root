@@ -1,0 +1,140 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Calm down, it was a misinput! MISINPUT!
+
+Hyprland received signal 6 (Aborted)
+
+Version: 7b32b4214d028a173c8192bddaa9e43503326080
+Tag: v0.31.0-63-g7b32b421
+
+System info:
+	System name: Linux
+	Node name: antkss.com
+	Release: 6.1.46-1-clear-ltscurrent
+	Version: #1 SMP Tue, 22 Aug 2023 01:31:45 +0000
+
+GPU:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation 4th Gen Core Processor Integrated Graphics Controller [8086:0416] (rev 06) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x561840cc5c02]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x581) [0x561840c95981]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x43) [0x561840c25033]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x56184014a710]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x8e83c) [0x56184019a83c]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(raise+0x18) [0x56184014a668]
+		??
+		??:0
+	#6 | /usr/lib/libc.so.6(abort+0xd7) [0x5618401324b8]
+		??
+		??:0
+	#7 | /usr/lib/libstdc++.so.6(+0x9ca6f) [0x56184049ca6f]
+		??
+		??:0
+	#8 | /usr/lib/libstdc++.so.6(+0xb011c) [0x5618404b011c]
+		??
+		??:0
+	#9 | /usr/lib/libstdc++.so.6(+0xb0189) [0x5618404b0189]
+		??
+		??:0
+	#10 | /usr/lib/libstdc++.so.6(+0xb03ed) [0x5618404b03ed]
+		??
+		??:0
+	#11 | Hyprland(+0x6796e) [0x561840beb96e]
+		??
+		??:0
+	#12 | Hyprland(_ZN11CCompositor10initServerEv+0x627) [0x561840c2d477]
+		??
+		??:0
+	#13 | Hyprland(main+0x827) [0x561840c0fcb7]
+		??
+		??:0
+	#14 | /usr/lib/libc.so.6(+0x27cd0) [0x561840133cd0]
+		??
+		??:0
+	#15 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x561840133d8a]
+		??
+		??:0
+	#16 | Hyprland(_start+0x25) [0x561840c22255]
+		??
+		??:0
+
+
+Log tail:
+[LOG] GPU information:
+00:02.0 VGA compatible controller [0300]: Intel Corporation 4th Gen Core Processor Integrated Graphics Controller [8086:0416] (rev 06) (prog-if 00 [VGA controller])
+
+
+[LOG] os-release:
+NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo
+
+[LOG] ========================
+
+
+
+[INFO] If you are crashing, or encounter any bugs, please consult https://wiki.hyprland.org/Crashes-and-Bugs/
+
+
+[LOG] 
+Current splash: Ground control to Major Tom...
+
+
+[LOG] Creating the HookSystem!
+[LOG] Creating the KeybindManager!
+[LOG] [hookSystem] New hook event registered: configReloaded
+[LOG] Creating the AnimationManager!
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 38.25µs. Estimated average calc time: 0.05µs.
+[LOG] Creating the ConfigManager!
+[LOG] Creating the CHyprError!
+[LOG] [hookSystem] New hook event registered: focusedMon
+[LOG] [hookSystem] New hook event registered: preRender
+[LOG] Creating the LayoutManager!
+[LOG] [hookSystem] New hook event registered: preConfigReload
+[LOG] Reloading the config!
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 20.46µs. Estimated average calc time: 0.07µs.
+[LOG] Using config: /root/.config/hypr/hyprland.conf
+[WARN] Creating config home directory
+[WARN] No config file found; attempting to generate.
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 18.46µs. Estimated average calc time: 0.05µs.
+[LOG] Registered dynamic var "$mainMod" -> SUPER
+[LOG] Disabling stdout logs! Check the log for further logs.
+[wlr] [backend/x11/backend.c:409] Failed to open xcb connection
+[CRITICAL] m_sWLRBackend was NULL!
+[CRITICAL] Critical error thrown: wlr_backend_autocreate() failed!

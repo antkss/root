@@ -1,0 +1,19 @@
+status: 200
+date: Sun, 12 Nov 2023 04:37:42 GMT
+server: Apache/2.4.41 (Ubuntu)
+content-location: index.json
+vary: negotiate,accept,Accept-Encoding
+tcn: choice
+last-modified: Thu, 02 Nov 2023 14:51:36 GMT
+etag: "8fa-6092c8642ce00-gzip"
+accept-ranges: bytes
+content-type: application/json; qs=0.9
+x-cache: MISS from juju-98d295-prod-launchpad-30
+x-cache-lookup: MISS from juju-98d295-prod-launchpad-30:3128
+via: 1.1 juju-98d295-prod-launchpad-30 (squid/4.10)
+content-length: 2298
+-content-encoding: gzip
+-varied-accept: application/json
+-varied-accept-encoding: gzip, deflate
+
+{"resource_type_link": "https://api.launchpad.net/devel/#service-root", "temporary_blobs_collection_link": "https://api.launchpad.net/devel/temporary-blobs", "countries_collection_link": "https://api.launchpad.net/devel/+countries", "languages_collection_link": "https://api.launchpad.net/devel/+languages", "questions_collection_link": "https://api.launchpad.net/devel/questions", "specifications_collection_link": "https://api.launchpad.net/devel/", "bug_trackers_collection_link": "https://api.launchpad.net/devel/bugs/bugtrackers", "cves_collection_link": "https://api.launchpad.net/devel/bugs/cve", "bugs_collection_link": "https://api.launchpad.net/devel/bugs", "builders_collection_link": "https://api.launchpad.net/devel/builders", "processors_collection_link": "https://api.launchpad.net/devel/+processors", "charm_bases_collection_link": "https://api.launchpad.net/devel/+charm-bases", "charm_recipes_collection_link": "https://api.launchpad.net/devel/+charm-recipes", "branches_collection_link": "https://api.launchpad.net/devel/branches", "git_repositories_collection_link": "https://api.launchpad.net/devel/+git", "snap_bases_collection_link": "https://api.launchpad.net/devel/+snap-bases", "snaps_collection_link": "https://api.launchpad.net/devel/+snaps", "snappy_serieses_collection_link": "https://api.launchpad.net/devel/+snappy-series", "archives_collection_link": "https://api.launchpad.net/devel/archives", "livefses_collection_link": "https://api.launchpad.net/devel/livefses", "packagesets_collection_link": "https://api.launchpad.net/devel/package-sets", "translation_groups_collection_link": "https://api.launchpad.net/devel/+groups", "translation_import_queue_entries_collection_link": "https://api.launchpad.net/devel/+imports", "distributions_collection_link": "https://api.launchpad.net/devel/distros", "people_collection_link": "https://api.launchpad.net/devel/people", "polls_collection_link": "https://api.launchpad.net/devel/+polls", "projects_collection_link": "https://api.launchpad.net/devel/projects", "project_groups_collection_link": "https://api.launchpad.net/devel/projectgroups", "services_link": "https://api.launchpad.net/devel/services", "pillars_link": "https://api.launchpad.net/devel/pillars", "me_link": "https://api.launchpad.net/devel/people/+me"}

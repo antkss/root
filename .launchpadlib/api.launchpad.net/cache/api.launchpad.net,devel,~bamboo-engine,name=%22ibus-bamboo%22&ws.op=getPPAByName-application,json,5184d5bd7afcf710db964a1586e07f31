@@ -1,0 +1,22 @@
+status: 200
+date: Sun, 12 Nov 2023 04:37:42 GMT
+server: gunicorn
+x-powered-by: Zope (www.zope.org), Python (www.python.org)
+content-security-policy: frame-ancestors 'self';
+content-type: application/json
+strict-transport-security: max-age=15552000
+vary: Accept,Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-launchpad-revision: f1e537f62ee3967c2b3f24dd10eacf1696334fe6
+x-lazr-notifications: []
+x-xss-protection: 1; mode=block
+x-vcs-revision: f1e537f62ee3967c2b3f24dd10eacf1696334fe6
+x-request-id: db4fc13c-871b-41b4-a745-15c43f015f1d
+content-length: 2660
+-content-encoding: gzip
+content-location: https://api.launchpad.net/devel/~bamboo-engine?name=%22ibus-bamboo%22&ws.op=getPPAByName
+-varied-accept: application/json
+-varied-accept-encoding: gzip, deflate
+
+{"self_link": "https://api.launchpad.net/devel/~bamboo-engine/+archive/ubuntu/ibus-bamboo", "web_link": "https://launchpad.net/~bamboo-engine/+archive/ubuntu/ibus-bamboo", "resource_type_link": "https://api.launchpad.net/devel/#archive", "owner_link": "https://api.launchpad.net/devel/~bamboo-engine", "name": "ibus-bamboo", "displayname": "ibus-bamboo", "reference": "~bamboo-engine/ubuntu/ibus-bamboo", "distribution_link": "https://api.launchpad.net/devel/ubuntu", "private": false, "suppress_subscription_notifications": false, "dependencies_collection_link": "https://api.launchpad.net/devel/~bamboo-engine/+archive/ubuntu/ibus-bamboo/dependencies", "description": "IBus Bamboo - B\u1ed9 g\u00f5 ti\u1ebfng Vi\u1ec7t cho Linux\n===================================\n\n### S\u01a1 l\u01b0\u1ee3c t\u00ednh n\u0103ng\n* H\u1ed7 tr\u1ee3 t\u1ea5t c\u1ea3 c\u00e1c b\u1ea3ng m\u00e3 ph\u1ed5 bi\u1ebfn:\n\u00a0\u00a0- Unicode, TCVN (ABC)\n\u00a0\u00a0- VIQR, VNI, VPS, VISCII, BK HCM1, BK HCM2,\u2026\n\u00a0\u00a0- Unicode UTF-8, Unicode NCR - for Web editors.\n* Nhi\u1ec1u ki\u1ec3u g\u00f5:\n\u00a0\u00a0- Simple Telex, Telex 2, Telex 3\n\u00a0\u00a0- VNI, VIQR, Microsoft layout\n\u00a0\u00a0- Telex + VNI + VIQR\n* Nhi\u1ec1u t\u00ednh n\u0103ng hi\u1ec7n \u0111\u1ea1i:\n\u00a0\u00a0- Ki\u1ec3m tra ch\u00ednh t\u1ea3 (s\u1eed d\u1ee5ng t\u1eeb \u0111i\u1ec3n/lu\u1eadt gh\u00e9p v\u1ea7n)\n\u00a0\u00a0- D\u1ea5u thanh chu\u1ea9n v\u00e0 d\u1ea5u thanh ki\u1ec3u m\u1edbi\n\u00a0\u00a0- B\u1ecf d\u1ea5u t\u1ef1 do, G\u00f5 t\u1eaft (macro), Emoji,...\n* S\u1eed d\u1ee5ng ph\u00edm t\u1eaft \u003cShift\u003e + ~ \u0111\u1ec3 lo\u1ea1i tr\u1eeb \u1ee9ng d\u1ee5ng kh\u00f4ng d\u00f9ng b\u1ed9 g\u00f5, chuy\u1ec3n qua l\u1ea1i gi\u1eefa c\u00e1c ch\u1ebf \u0111\u1ed9 g\u00f5:\n\u00a0\u00a0- Preedit (default)\n\u00a0\u00a0- Surrounding text, IBus ForwardKeyEvent, XTestFakeKeyEvent,... ", "signing_key_fingerprint": "5AD2E0B68A0409AD907D462D36ED424E9659D014", "require_virtualized": true, "build_debug_symbols": false, "publish_debug_symbols": false, "permit_obsolete_series_uploads": false, "authorized_size": 2048, "status": "Active", "external_dependencies": null, "processors_collection_link": "https://api.launchpad.net/devel/~bamboo-engine/+archive/ubuntu/ibus-bamboo/processors", "enabled_restricted_processors_collection_link": "https://api.launchpad.net/devel/~bamboo-engine/+archive/ubuntu/ibus-bamboo/enabled_restricted_processors", "publishing_method": "Local", "repository_format": "Debian", "publish": true, "relative_build_score": 0, "http_etag": "\"fede7cabc80edc4adc7f1f5a1d13a0318d2fd823-f020c9fbf1d5ecc7aa0745ddedaefd47c9e8988d\""}

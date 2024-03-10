@@ -1,0 +1,148 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Sorry, didn't mean to...
+
+Hyprland received signal 6 (Aborted)
+
+Version: d74607e414dcd16911089a6d4b6aeb661c880923
+Tag: v0.33.1
+
+System info:
+	System name: Linux
+	Node name: ARCHLINUZ
+	Release: 6.7.6-x64v3-xanmod1-1-clang-v3
+	Version: #1 SMP PREEMPT_DYNAMIC Sat, 24 Feb 2024 12:15:17 +0000
+
+GPU:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation 4th Gen Core Processor Integrated Graphics Controller [8086:0416] (rev 06) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x48) [0x5555556f8ef8]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x598) [0x5555556ae5a8]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x3c) [0x55555561eddc]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3c770) [0x7ffff716e770]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x8d32c) [0x7ffff71bf32c]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(gsignal+0x18) [0x7ffff716e6c8]
+		??
+		??:0
+	#6 | /usr/lib/libc.so.6(abort+0xd7) [0x7ffff71564b8]
+		??
+		??:0
+	#7 | /usr/lib/libstdc++.so.6(+0x9ca6f) [0x7ffff749ca6f]
+		??
+		??:0
+	#8 | /usr/lib/libstdc++.so.6(+0xb011c) [0x7ffff74b011c]
+		??
+		??:0
+	#9 | /usr/lib/libstdc++.so.6(+0xb0189) [0x7ffff74b0189]
+		??
+		??:0
+	#10 | /usr/lib/libstdc++.so.6(+0xb03ed) [0x7ffff74b03ed]
+		??
+		??:0
+	#11 | Hyprland(+0x8b2a1) [0x5555555df2a1]
+		??
+		??:0
+	#12 | Hyprland(_ZN11CCompositor10initServerEv+0x5bd) [0x55555563341d]
+		??
+		??:0
+	#13 | Hyprland(main+0x479) [0x555555609649]
+		??
+		??:0
+	#14 | /usr/lib/libc.so.6(+0x25cd0) [0x7ffff7157cd0]
+		??
+		??:0
+	#15 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7ffff7157d8a]
+		??
+		??:0
+	#16 | Hyprland(_start+0x25) [0x55555561ec65]
+		??
+		??:0
+
+
+Log tail:
+[LOG] Instance Signature: d74607e414dcd16911089a6d4b6aeb661c880923_1709302609
+[LOG] Hyprland PID: 41877
+[LOG] ===== SYSTEM INFO: =====
+[LOG] System name: Linux
+[LOG] Node name: ARCHLINUZ
+[LOG] Release: 6.7.6-x64v3-xanmod1-1-clang-v3
+[LOG] Version: #1 SMP PREEMPT_DYNAMIC Sat, 24 Feb 2024 12:15:17 +0000
+
+
+[LOG] GPU information:
+00:02.0 VGA compatible controller [0300]: Intel Corporation 4th Gen Core Processor Integrated Graphics Controller [8086:0416] (rev 06) (prog-if 00 [VGA controller])
+
+
+[LOG] os-release:
+NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo
+
+[LOG] ========================
+
+
+
+[INFO] If you are crashing, or encounter any bugs, please consult https://wiki.hyprland.org/Crashes-and-Bugs/
+
+
+[LOG] 
+Current splash: Some legends are told, some turn to dust or to gold
+
+
+[LOG] Creating the HookSystem!
+[LOG] Creating the KeybindManager!
+[LOG] [hookSystem] New hook event registered: configReloaded
+[LOG] Creating the AnimationManager!
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 32.45µs. Estimated average calc time: 0.00µs.
+[LOG] Creating the ConfigManager!
+[LOG] NOTE: further logs to stdout / logfile are disabled by default. Use debug:disable_logs and debug:enable_stdout_logs to override this.
+[LOG] Creating the CHyprError!
+[LOG] [hookSystem] New hook event registered: focusedMon
+[LOG] [hookSystem] New hook event registered: preRender
+[LOG] Creating the LayoutManager!
+[LOG] [hookSystem] New hook event registered: preConfigReload
+[LOG] Reloading the config!
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 19.00µs. Estimated average calc time: 0.00µs.
+[LOG] Using config: /root/.config/hypr/hyprland.conf
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 18.72µs. Estimated average calc time: 0.00µs.
+[LOG] Registered dynamic var "$mainMod" -> SUPER
+[LOG] Disabling stdout logs! Check the log for further logs.
+[backend/x11/backend.c:409] Failed to open xcb connection
+[CRITICAL] m_sWLRBackend was NULL!
+[CRITICAL] Critical error thrown: wlr_backend_autocreate() failed!

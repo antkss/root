@@ -2,3 +2,7 @@
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 repository.ow2.org	0	1	1695522540	15768000
+gist.githubusercontent.com	0	0	1708841355	31536000
+raw.githubusercontent.com	0	0	1709690065	31536000
+github.com	0	1	1699758989	31536000
+archlinux.org	0	1	1708829942	31536000

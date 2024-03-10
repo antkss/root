@@ -1,0 +1,221 @@
+#[assemble]
+#default_architecture = X86
+#default_mode = 64
+
+[capstone-disassemble]
+use-capstone = False
+
+[context]
+clear_screen = False
+enable = True
+grow_stack_down = False
+ignore_registers = 
+layout = legend regs stack code args source memory threads extra libc_function_args syscall_args
+#ibc_args = True
+#libc_args_path = /home/as/.config/gef-extras/glibc-function-args
+nb_lines_backtrace = 5
+nb_lines_backtrace_before = 2
+nb_lines_code = 5
+nb_lines_code_prev = 3
+nb_lines_stack = 8
+nb_lines_threads = -1
+peek_calls = True
+peek_ret = True
+redirect = 
+show_basename_source_file_name_max_len = 20
+show_full_source_file_name_max_len = 30
+show_opcodes_size = 0
+show_prefix_source_path_name_len = 10
+show_registers_raw = False
+show_source_code_variable_values = False
+show_stack_raw = False
+
+[dereference]
+max_recursion = 7
+
+[entry-break]
+entrypoint_symbols = main _main __libc_start_main __uClibc_main start _start
+
+[ftrace]
+output = /dev/stderr
+
+[gef]
+autosave_breakpoints_file = 
+bruteforce_main_arena = False
+buffer = True
+debug = False
+disable_color = False
+disable_target_remote_overwrite = False
+#extra_plugins_dir = /home/as/.config/gef-extras/scripts
+follow_child = True
+libc_version = 
+main_arena_offset = 
+propagate_debug_exception = False
+readline_compat = False
+show_deprecation_warnings = False
+tempdir = /tmp/gef
+use-windbg-prompt = False
+
+[got]
+function_not_resolved = blue
+function_resolved = green
+
+[heap-analysis-helper]
+check_double_free = True
+check_free_null = False
+check_heap_overlap = True
+check_uaf = True
+check_weird_free = True
+
+[heap-chunks]
+peek_nb_byte = 16
+
+[hexdump]
+always_show_ascii = False
+
+[highlight]
+regex = True
+
+[ida-rpyc]
+host = 127.0.0.1
+port = 18812
+sync_cursor = False
+
+[pattern]
+length = 1024
+
+[pcustom]
+max_depth = 4
+#struct_path = /home/as/.config/gef-extras/structs
+structure_name = bold blue
+structure_size = bold green
+structure_type = bold red
+
+[print-format]
+max_size_preview = 10
+
+[process-search]
+ps_command = /usr/bin/ps auxww
+
+[retdec]
+path = /tmp/gef
+retdec_path = 
+theme = default
+
+[rpyc-remote]
+host = 0.0.0.0
+port = 12345
+
+[search-pattern]
+max_size_preview = 10
+nr_pages_chunk = 1024
+
+#[syscall-args]
+#path = /home/as/.config/gef-extras/syscall-tables
+
+[theme]
+address_code = bold red
+address_heap = bold  purple
+address_stack = bold yellow
+context_title_line = gray
+context_title_message = bold cyan
+default_title_line = gray
+default_title_message = bold cyan
+dereference_base_address = bold cyan
+dereference_code = gray
+dereference_register_value = bold blue
+dereference_string = yellow
+disassemble_current_instruction = green
+old_context = gray
+registers_register_name = bold blue
+registers_value_changed = bold green
+source_current_line = green
+table_heading = bold blue
+
+[trace-run]
+max_tracing_recursion = 1
+tracefile_prefix = ./gef-trace-
+
+[unicorn-emulate]
+show_disassembly = False
+verbose = False
+
+[vereference]
+max_recursion = 7
+
+[aliases]
+ctx = context
+telescope = dereference
+flags = edit-flags
+start = entry-break
+fmtstr-helper = format-string-helper
+hl = highlight
+highlight set = highlight add
+hla = highlight add
+hlc = highlight clear
+highlight ls = highlight list
+hll = highlight list
+highlight delete = highlight remove
+highlight del = highlight remove
+highlight unset = highlight remove
+highlight rm = highlight remove
+hlr = highlight remove
+nb = name-break
+pattern offset = pattern search
+pf = print-format
+ps = process-search
+status = process-status
+lookup = scan
+grep = search-pattern
+xref = search-pattern
+sc-get = shellcode get
+sc-search = shellcode search
+screen-setup = tmux-setup
+m = start
+ls = !ls --color=auto
+cls = !clear
+nvim = !nvim
+cyclic = pattern create
+cx = context
+te = tel
+htop = !htop
+da = display/s
+dt = pcustom
+dq = hexdump qword
+dd = hexdump dword
+dw = hexdump word
+db = hexdump byte
+eq = patch qword
+ed = patch dword
+ew = patch word
+eb = patch byte
+ea = patch string
+dps = dereference
+bp = break
+bl = info breakpoints
+bd = disable breakpoints
+bc = delete breakpoints
+be = enable breakpoints
+tbp = tbreak
+s = grep
+pa = advance
+t = stepi
+p = nexti
+kp = info stack
+uf = disassemble
+asm = assemble
+cs-dis = capstone-disassemble
+stack-view = current-stack-frame
+perror = error
+skeleton = exploit-template
+ida-rpyc bp = ida-rpyc breakpoints
+ida-rpyc bl = ida-rpyc breakpoints list
+ida-rpyc cmt = ida-rpyc comments
+ida-rpyc hl = ida-rpyc highlight
+ida-rpyc goto = ida-rpyc jump
+decompile = retdec
+mprotect = set-permission
+emulate = unicorn-emulate
+v8 = vereference
+heap-view = visualize-libc-heap-chunks
+

@@ -1,0 +1,6 @@
+2024-03-02 14:34:55,401 - INFO - debug_session.py:128 - 0 - **** INITIALISING NEW VIMSPECTOR SESSION FOR ID 0 ****
+2024-03-02 14:34:55,401 - INFO - debug_session.py:130 - 0 - API is: neo
+2024-03-02 14:34:55,401 - INFO - debug_session.py:131 - 0 - VIMSPECTOR_HOME = /home/as/.config/nvim/plugged/vimspector/python3/vimspector/../..
+2024-03-02 14:34:55,401 - INFO - debug_session.py:132 - 0 - gadgetDir = /home/as/.config/nvim/plugged/vimspector/gadgets/linux
+2024-03-02 14:34:55,404 - DEBUG - debug_session.py:620 - 0 - Stop debug adapter with callback: _Reset
+2024-03-02 14:34:55,404 - INFO - debug_session.py:662 - 0 - Debugging complete.

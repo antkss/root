@@ -3,9 +3,9 @@ call plug#begin('/home/as/.config/nvim/plugged')
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 " nerdtree hightlight and icons
 
-Plug 'neovim/nvim-lsp' " nvim-lsp
+"Plug 'neovim/nvim-lsp' " nvim-lsp
 
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'ryanoasis/vim-devicons'
 " save and restore nerdtree state between sessions
 "Git status flag
@@ -28,7 +28,6 @@ Plug 'nvim-pack/nvim-spectre'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " debug plugin "
-Plug 'puremourning/vimspector'
 "comment plugin
 Plug 'numToStr/Comment.nvim'
 "chatgpt plugin 
@@ -67,7 +66,7 @@ inoremap <silent><expr> <Tab>
 " nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-nnoremap \ :Files<CR>
+nnoremap = :Files<CR>
 nnoremap q: q <CR>
 set number
 
@@ -104,17 +103,17 @@ inoremap {<CR> {<CR>}<ESC>O
 lua require('Comment').setup()
 "debug configuration "
 
-nnoremap <S-m> :call vimspector#Launch()<CR>
-nnoremap <S-c> :call vimspector#Continue()<CR>
-
-nnoremap <S-b> :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <S-d> :call vimspector#ClearBreakpoints()<CR>
-
-nmap <C-S-r> <Plug>VimspectorRestart
-nmap <S-o> <Plug>VimspectorStepOut
-nmap <S-i> <Plug>VimspectorStepInto
-nmap <S-n> <Plug>VimspectorStepOver
-nnoremap <S-e> :call vimspector#Reset( { 'interactive': v:false } )<CR>
+" nnoremap <S-m> :call vimspector#Launch()<CR>
+" nnoremap <S-c> :call vimspector#Continue()<CR>
+"
+" nnoremap <S-b> :call vimspector#ToggleBreakpoint()<CR>
+" nnoremap <S-d> :call vimspector#ClearBreakpoints()<CR>
+"
+" nmap <C-S-r> <Plug>VimspectorRestart
+" nmap <S-o> <Plug>VimspectorStepOut
+" nmap <S-i> <Plug>VimspectorStepInto
+" nmap <S-n> <Plug>VimspectorStepOver
+" nnoremap <S-e> :call vimspector#Reset( { 'interactive': v:false } )<CR>
 nmap <C-s> :w<CR>
 " map the alt key to the esc key
 inoremap <C-c> <Esc>

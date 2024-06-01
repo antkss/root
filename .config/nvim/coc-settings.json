@@ -1,4 +1,18 @@
 {
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
-  "snippets.ultisnips.pythonPrompt": false
+"border":true,
+"dialog.floatBorderHighlight":10,
+"suggest.floatConfig.border":true,
+"suggest.disableKind": true,
+"languageserver":{
+   "clangd": {
+    "command": "/usr/bin/clangd",
+    "filetypes": ["c", "cpp", "objc", "objcpp"],
+    "trace.server": "verbose",
+    "initializationOptions": {
+      "cacheDirectory": "/tmp/clangd"
+    }
+  }
 }
+
+}
+       

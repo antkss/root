@@ -119,9 +119,9 @@ return {
 			    }),
 			 sources = cmp.config.sources(
 				{
-					-- { name = 'luasnip', option = { show_autosnippets = true } },
+					{ name = 'luasnip', option = { show_autosnippets = true } },
 					{ name = 'nvim_lsp' },
-					{ name = 'codeium' },
+					-- { name = 'codeium' },
 				      -- { name = 'ultisnips' }, -- For ultisnips users.
 				      -- { name = 'snippy' }, -- For snippy users.
 				}
@@ -147,7 +147,6 @@ return {
 		})
 
 
-		require("codeium").setup({})
 		require("lspconfig").clangd.setup{
 			capabilities = capabilities,
 				workspace = {

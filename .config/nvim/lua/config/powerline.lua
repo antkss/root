@@ -1,13 +1,13 @@
 local Colors = {
-  ibg		= '#FFB1C2',
-  bbg		= '#1D1013',
-  nbg		= '#FFB1C2',
-  vfg		= '#FFD9E0',
-  ifg		= '#BB0056',
-  rbg		= '#FFB599',
-  vbg		= '#693D3A',
-  cmdbg         = '#FFB1C2',
-  cmdfg         = '#8F0040',
+  ibg		= '#FFB77F',
+  bbg		= '#FFF8F5',
+  nbg		= '#924C00',
+  vfg		= '#FFDCC4',
+  ifg		= '#2F1500',
+  rbg		= '#E5C277',
+  vbg		= '#FDD3A0',
+  cmdbg         = '#924C00',
+  cmdfg         = '#FFDCC4',
 }
 local M = {
   normal = {
@@ -18,7 +18,7 @@ local M = {
     a = { fg = Colors.ifg, bg = Colors.ibg, gui = 'bold' },
     c = { fg = Colors.ifg, bg = Colors.bbg },
   },
-  visual = { a = { fg = Colors.vfg, bg = Colors.vbg, gui = 'bold' } },
+  visual = { a = { fg = Colors.nbg, bg = Colors.vbg, gui = 'bold' } },
   replace = { a = { fg = Colors.bbg, bg = Colors.rbg, gui = 'bold' } },
   -- inactive = {
   --   a = { fg = Colors.gray1, bg = Colors.gray5, gui = 'bold' },

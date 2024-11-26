@@ -1,79 +1,140 @@
-		local cmp = require'cmp'
-		cmp.setup({
-		    snippet = {
-		      -- REQUIRED - you must specify a snippet engine
-		      expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			-- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-			-- require("cmp_nvim_ultisnips").setup{}
-			-- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
-		      end,
-		    },
-		    -- window = {
-		      -- completion = cmp.config.window.bordered(),
-		      -- documentation = cmp.config.window.bordered(),
-		    -- },
 
-		 mapping = {
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+	client.server_capabilities.semanticTokensProvider = nil
+    end,
+});
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('mini.pairs').setup()
+-- require('mini.surround').setup()
+local cmp = require'cmp'
+local kind_icons = {
+  Text = " text",
+  Method = "󰆧 method",
+  Function = "󰊕 function",
+  Constructor = " constructor",
+  Field = "󰇽 field",
+  Variable = "󰂡 variable",
+  Class = "󰠱 class",
+  Interface = " interface",
+  Module = " module",
+  Property = "󰜢 property",
+  Unit = " unit",
+  Value = "󰎠 value",
+  Enum = " enum",
+  Keyword = "󰌋 keyword",
+  Snippet = " snippet",
+  Color = "󰏘 color",
+  File = "󰈙 file",
+  Reference = " reference",
+  Folder = "󰉋 folder",
+  EnumMember = " enum member",
+  Constant = "󰏿 constant",
+  Struct = " struct",
+  Event = " event",
+  Operator = "󰆕 operator",
+  TypeParameter = "󰅲 type parameter",
+  Codeium = "󰫢 ai",
+}
+cmp.setup({
+	snippet = {
+		  expand = function(args)
+			-- vim.fn["vsnip#anonymous"](args.body)
+			require'luasnip'.lsp_expand(args.body)
+		  end,
+	 },
+	-- completion = {
+	--   completeopt = 'menu,menuone,preview,noselect',
+	-- },
+	mapping = cmp.mapping.preset.insert({
+	      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+	      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+	      ['<C-Space>'] = cmp.mapping.complete(),
+	      -- ['<C-e>'] = cmp.mapping.abort(),
+	      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		["<C-e>"] = cmp.mapping(
+		function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+	    }),
+	 sources = cmp.config.sources(
+		{
+			{ name = 'luasnip', option = { show_autosnippets = true } },
+			-- {name = 'vsnip', option = { show_autosnippets = true }},
+			{ name = 'nvim_lsp' },
+			{ name = 'buffer' },
+			-- { name = 'codeium' },
+			-- { name = 'ultisnips' }, -- For ultisnips users.
+			-- { name = 'snippy' }, -- For snippy users.
+		}
+	),
 
-		    -- ... Your other mappings ...
+	formatting = {
+	    format = function(entry, vim_item)
+	      -- Kind icons
+	      vim_item.kind = string.format('%s', kind_icons[vim_item.kind]) -- This concatenates the icons with the name of the item kind
+	      -- Source
+	      vim_item.menu = ({
+		buffer = "",
+		nvim_lsp = "",
+		codeium = "",
+	      })[entry.source.name]
+	      return vim_item
+	    end
+	  },
+	  window = {
+		  completion = cmp.config.window.bordered(),
+		  documentation = cmp.config.window.bordered(),
+	  },
+})
 
-		    -- ["<Tab>"] = cmp.mapping(function(fallback)
-		 --      if cmp.visible() then
-			-- 	cmp.select_next_item()
-			--       elseif vim.fn["vsnip#available"](1) == 1 then
-			-- 	feedkey("<Plug>(vsnip-expand-or-jump)", "")
-			--       -- elseif has_words_before() then
-			-- 	-- cmp.complete()
-			--       else
-			-- fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-		 --      end
-		    -- end, { "i", "s" }),
+require"lspconfig".pyright.setup {
+	capabilities = capabilities,
+		workspace = {
+			maxPreload = 11,
+			preloadFileSize = 10,
+		},
 
-		    ["<Tab>"] = cmp.mapping(function()
-		      if cmp.visible() then
-			cmp.select_next_item()
-		 --      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-			-- feedkey("<Plug>(vsnip-jump-prev)", "")
-		      end
-		    end, { "i", "s" }),
-			-- ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+}
+require("lspconfig").clangd.setup{
+	capabilities = capabilities,
+	filetypes = { "c", "cpp","h","hpp" },
+		workspace = {
+			maxPreload = 5,
+			preloadFileSize = 10,
+		},
 
-		    -- ... Your other mappings ...
+}
 
-		  },
-		 	sources = cmp.config.sources({
-			{ name = "codeium" },
-		      -- { name = 'nvim_lsp' },
-		    }),
-		  })
+require("lspconfig").lua_ls.setup {
+	capabilities = capabilities,
+	filetypes = { "lua" },
+		workspace = {
+			maxPreload = 11,
+			preloadFileSize = 10,
+		},
 
-		  -- Set configuration for specific filetype.
-		-- Set up lspconfig.
-		-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		-- require('lspconfig')['clangd'].setup {
-		--   capabilities = capabilities
-		--   }
-		-- require('lspconfig')['lua_ls'].setup {
-		--   capabilities = capabilities
-		-- }
-		-- require('lspconfig')['pyright'].setup {
-		-- 	capabilities = capabilities
-		--
-		--
-		-- }
--- end,
--- sign configurations
--- local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
--- for type, icon in pairs(signs) do
---   local hl = "DiagnosticSign" .. type
---   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
--- end
--- vim.diagnostic.config({
---   virtual_text = {
---     prefix = '●', -- Could be '●', '▎', 'x'
---   }
--- })
+}
+require("lspconfig").ts_ls.setup {
+    capabilities = capabilities,
+    workspace = {
+	    maxPreload = 11,
+	    preloadFileSize = 10,
+    },
+
+}
+
+
+require'lspconfig'.vala_ls.setup {
+  -- defaults, no need to specify these
+  cmd = { "vala-language-server" },
+  filetypes = { "vala", "genie" },
+  single_file_support = true,
+}
+-- vim.cmd("LspStart")
 

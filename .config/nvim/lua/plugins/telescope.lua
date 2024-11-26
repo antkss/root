@@ -5,10 +5,15 @@ return {
 	opts = {
 		pickers = {
                 find_files = {
-                    hidden = true,
+		    theme = "ivy",
                 },
+		live_grep = {
+		    theme = "ivy",
+		},
+		buffers = {
+		  theme = "ivy",
+		}
             },
-
 	},
 	keys = {
 		{'ff', ":Telescope find_files <CR>",silent = true},

@@ -26,21 +26,20 @@ require("lazy").setup("plugins",{
 		rtp = {
 		    -- disable some rtp plugins
 		    disabled_plugins = {
-			-- "gzip",
+			"gzip",
 			-- "matchit",
 			-- "matchparen",
 			-- "netrwPlugin",
 			-- "tarPlugin",
-			-- "tohtml",
-			-- "tutor",
-			"zipPlugin",
+			"tohtml",
+			"tutor",
+			-- "zipPlugin",
 		    },
 		},
 	    },
 })
-vim.opt.termguicolors=true
 vim.o.updatetime = 250
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 
 vim.api.nvim_exec(
 	[[
@@ -52,7 +51,8 @@ vim.api.nvim_exec(
 ]],
 	false
 )
+vim.lsp.set_log_level("off")
 
-dofile(os.getenv('HOME') .. '/.config/nvim/lua/config/debug.lua')
-dofile(os.getenv('HOME') .. '/.config/nvim/lua/config/interface.lua')
-dofile(os.getenv('HOME') .. '/.config/nvim/lua/config/keymap.lua')
+require("config")
+
+

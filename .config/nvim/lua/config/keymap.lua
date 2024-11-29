@@ -17,10 +17,10 @@ vim.api.nvim_set_keymap('n','+',':join <CR>', {noremap = true})
 --
 -- vim.opt.clipboard = "unnamedplus"
 -- vim.api.nvim_set_keymap('n','<LeftMouse>','<nop>', {noremap = true})
-vim.api.nvim_set_keymap('v', 'y', '"+y', {noremap = true})
-vim.api.nvim_set_keymap('v', 'Y', '"+yg_', {noremap = true})
-vim.api.nvim_set_keymap('n', 'y', '"+y', {noremap = true})
-vim.api.nvim_set_keymap('n', 'yy', '"+yy', {noremap = true})
+-- vim.api.nvim_set_keymap('v', 'y', '"+y', {noremap = true})
+-- vim.api.nvim_set_keymap('v', 'Y', '"+yg_', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'y', '"+y', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'yy', '"+yy', {noremap = true})
 -- paste things
 vim.api.nvim_set_keymap('n', 'p', '"+p', {noremap = true})
 vim.api.nvim_set_keymap('v', 'p', '"+p', {noremap = true})

@@ -1,18 +1,6 @@
 set debuginfod enabled off
-# set auto-load safe-path /
+set auto-load safe-path /
 source /home/as/cac/pwndbg/gdbinit.py
-# source /home/as/cac/tools/gdbinit
-# set exception-debugger on
-# source /home/as/cac/pwn/gdbinit.py
-# source ~/gef/gef/gef.py
-# source ~/gef/gef.py
-# source /home/as/cac/pwndbg/.venv/lib/python3.12/site-packages/decomp2dbg/d2d.py
-# source /usr/share/pwndbg/gdbinit.py
-# source /home/as/.gdbnew2.py
-# source /usr/share/pwndbg/gdbinit.py
-# alias de=decompiler
-# alias angr=decompiler connect angr
-# alias bj=decompiler connect binaryninja
 define ls 
 !ls
 end
@@ -57,7 +45,6 @@ alias ff=search
 alias cx=context
 # alias px = !px
 alias vm=vmmap
-#alias ghi=decompiler connect ghidra
 # alias tl=x/40xg
 alias cls=!clear
 alias cs=checksec
@@ -108,4 +95,4 @@ set history size unlimited
 # end
 #
 
-source /home/as/.local/lib/python3.12/site-packages/decomp2dbg/d2d.py
+# source /home/as/.local/lib/python3.12/site-packages/decomp2dbg/d2d.py

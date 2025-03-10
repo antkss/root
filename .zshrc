@@ -93,6 +93,7 @@ local exit_code="%(?,,code:%{$fg[red]%}%?%{$reset_color%})"
 #
 # [TIME] [PRIVILEGES USER @ MACHINE] [DIRECTORY] on git:BRANCH STATE code:LAST_EXIT_CODE
 # $ COMMAND
+export PATH=$PATH:~/.bin/bin:~/.local/share/gem/ruby/3.2.0/bin:/depot_tools:/usr/local/bin:~/.local/bin:/sbin
 
 PROMPT="
 %{$fg_bold[red]%}┌──[%{$reset_color%}%*\

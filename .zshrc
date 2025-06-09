@@ -1,5 +1,5 @@
 if [ -z $DISPLAY ]; then 
-   neofetch
+   fastfetch
 fi 
 autoload -U colors && colors
 export DISPLAY=:0
